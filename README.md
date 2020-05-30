@@ -9,7 +9,7 @@ make docker-ssh
 exit
 ```
 
-#### Connect to shell
+#### Connect to psql shell
 ```shell
 make docker-psql
 ```
@@ -25,3 +25,9 @@ docker-compose stop
 # On host
 docker-compose start
 ```
+
+------
+
+## Pre-requisites
+* Host must have docker and docker-compose installed. 
+* Tested on MacOS and Debian (Ubuntu/PopOS).
