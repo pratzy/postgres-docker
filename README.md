@@ -9,9 +9,9 @@ make docker-ssh
 exit
 ```
 
-#### Connect from host
+#### Connect to shell
 ```shell
-psql -h localhost -d sandbox -U docker -p 5432
+make docker-psql
 ```
 
 #### Shutdown container
