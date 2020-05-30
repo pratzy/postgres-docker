@@ -14,7 +14,7 @@ services:
     volumes:
       - ./data:/var/lib/postgresql/data/ # persist data even if container shuts down
       - ./scripts:/scripts  # DB initialization scripts
-      - ./src:./src  # Sandbox scripts
+      - ./src:/src  # Sandbox scripts
 
   anaconda3:
     image: "continuumio/anaconda3"
