@@ -14,3 +14,16 @@ services:
     volumes:
       - ./data:/var/lib/postgresql/data/ # persist data even if container shuts down
       - ./scripts:/scripts  # DB initialization scripts
+      - ./src:./src  # Sandbox scripts
+
+  anaconda3:
+    image: "continuumio/anaconda3"
+    container_name: "anaconda3"
+    hostname: "anaconda3"
+    tty: true
+    ports:
+      - "55555:55555"
+    volumes:
+      - ./scripts:/scripts  # Contains initconda.sh
+      - ./src:/src # Sandbox python code
+    command: /bin/bash

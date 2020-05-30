@@ -1,7 +1,10 @@
 # postgres-docker
-Postgresql with Docker (docker-compose)
+Postgresql and Anaconda3 with Docker (docker-compose)
 Gives you a Postgresql dev sandbox on-the-go.
 
+--------
+
+## Postgresql container
 #### First run
 ```shell
 docker-compose up -d
@@ -13,6 +16,24 @@ exit
 #### Connect to psql shell
 ```shell
 make docker-psql
+```
+----------
+
+## Anaconda3 container
+Container will be brought up with the above mentioned docker-compose up command.
+
+#### First run
+```shell
+# Within anaconda3 container
+/script/initconda.sh
+conda activate py38
+python /src/python/test.py
+```
+----------
+
+#### Connect to container shell
+```shell
+make docker-ssh-conda
 ```
 
 #### Shutdown container

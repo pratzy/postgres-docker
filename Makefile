@@ -1,3 +1,6 @@
+docker-ssh-conda:
+	docker exec -it anaconda3 /bin/bash
+
 docker-ssh:
 	docker exec -it postgres-10 /bin/bash
 
