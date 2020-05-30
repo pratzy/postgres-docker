@@ -1,7 +1,7 @@
 version: '3'
 services:
   postgres-10:
-    image: "postgres:10" # use latest official postgres version
+    image: "postgres:10" #Pull version 10
     container_name: "postgres-10"
     restart: always
     ports:
