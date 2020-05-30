@@ -1,5 +1,6 @@
 # postgres-docker
 Postgresql with Docker (docker-compose)
+Gives you a Postgresql dev sandbox on-the-go.
 
 #### First run
 ```shell
