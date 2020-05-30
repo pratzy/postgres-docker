@@ -1,5 +1,5 @@
 # postgres-docker
-Postgresql with Docker
+Postgresql with Docker (docker-compose)
 
 #### First run
 ```shell
