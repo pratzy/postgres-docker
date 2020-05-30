@@ -8,7 +8,7 @@ Gives you a Postgresql dev sandbox on-the-go.
 #### First run
 ```shell
 docker-compose up -d
-make docker-ssh
+make docker-ssh  # To connect to posgtresql10 container shell
 /scripts/initdb.sh  # within docker container
 exit
 ```
@@ -24,17 +24,13 @@ Container will be brought up with the above mentioned docker-compose up command.
 
 #### First run
 ```shell
+make docker-ssh-conda # To connect to anaconda3 container shell
 # Within anaconda3 container
 /script/initconda.sh
 conda activate py38
 python /src/python/test.py
 ```
 ----------
-
-#### Connect to container shell
-```shell
-make docker-ssh-conda
-```
 
 #### Shutdown container
 ```shell
