@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres-10:
+    image: "postgres:10" # use latest official postgres version
+    container_name: "postgres-10"
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=sandbox
+    volumes:
+      - ./data:/var/lib/postgresql/data/ # persist data even if container shuts down
+      - ./scripts:/scripts  # DB initialization scripts
